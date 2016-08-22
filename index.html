@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <style>
+            .controls {text-align: center;} 
+            .controls * {margin: 0 auto;}
+        </style>
+    </head>
+    
+    <body>
+ 
+        <!-- Start of home page -->
+        <div data-role="page" id="home" data-theme="b">
+
+        <div data-role="header" data-theme=”a”>
+                <h1>Mobile @ Your Library</h1>
+        </div><!-- /header -->
+
+        <div data-role="content">
+        <ul data-role="listview" data-inset="true">
+                <li><a href="#search">Search</a></li>
+                <li><a href="#hours">Hours</a></li>
+                <li><a href="#ask">Ask a Librarian</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#where" data-rel="dialog" data-transition="pop">Where</a></li>
+        </ul>
+        </div><!-- /content -->
+
+        <div data-role="footer" data-id="myfooter" data-position="fixed">
+                <div class="controls" data-role="controlgroup" data-type="horizontal">
+                <a href="#home" data-role="button" data-icon="home">Home</a>
+                <a href="#search" data-role="button" data-icon="search">Search</a>
+                <a href="#ask" data-role="button" data-icon="info">Ask</a>
+                <a href="http://www.sjrstate.edu/libraries/" rel="external" data-role="button" data-icon="plus">Full site</a>
+                </div>
+        </div><!-- /footer -->
+
+        </div><!-- /page -->
+        
+        <!-- Start of search page -->
+        <div data-role="page" id="search" data-theme="b">
+
+        <div data-role="header">
+                <h1>Mobile @ Your Library</h1>
+        </div><!-- /header -->
+
+        <div data-role="content">	
+            <h2>Search the Library</h2> 
+            <form action="forms-results.php" method="get">
+            <fieldset>
+                <input type="text" value="" />
+                <div data-role="fieldcontain">
+                    <label for="select-options" class="select">Choose an option:</label>
+                    <select name="select-options" id="select-options">
+                        <option value="option1">Books, Videos, &amp; More</option>
+                        <option value="option2">Articles</option>
+                        <option value="option2">Databases</option>
+                    </select>
+                </div>
+                <button type="submit">Find</button>
+            </fieldset>
+        </form>
+        <p><a href="#home" data-direction="reverse">Back to home</a></p>	
+        </div><!-- /content -->
+
+        <div data-role="footer" data-id="myfooter" data-position="fixed">
+                <div class="controls" data-role="controlgroup" data-type="horizontal">
+                <a href="#home" data-role="button" data-icon="home">Home</a>
+                <a href="#search" data-role="button" data-icon="search">Search</a>
+                <a href="#ask" data-role="button" data-icon="info">Ask</a>
+                <a href=" http://www.sjrstate.edu/libraries/" rel="external" data-role="button" data-icon="plus">Full site</a>
+                </div>
+        </div><!-- /footer -->
+
+        </div><!-- /page -->
+        
+        <!-- Start of hours page --> 
+        <div data-role="page" id="hours" data-theme="b"> 
+
+                <div data-role="header"> 
+                        <h1>Mobile @ Your Library</h1> 
+                </div><!-- /header --> 
+
+                <!--Content-->
+                <div data-role="content">
+                        <h2>Hours</h2>
+                        <br>
+                        <p><strong>Campus Libraries</strong></p>
+                            <p>Monday - Thursday: 8:00 a.m. - 9:00 p.m.</p>
+                            <p>Friday: 8:00 a.m. - 5:00 p.m.</p>
+                        <br>
+                        <p><strong>Computer Labs </strong></p>
+                            <p>Monday - Thursday: 7:30 a.m. - 9:00 p.m.</p>
+                            <p>Friday: 7:30 a.m. - 5:00 p.m.</p>		
+
+                        <p><a href="#home" data-rel="back">Back to home</a></p>			
+                </div><!-- /content -->
+
+                <!--Footer-->
+                <div data-role="footer" data-id="myfooter" data-position="fixed"> 
+                                <div data-role="controlgroup" data-type="horizontal">
+                                <a href="#home" data-role="button" data-icon="home">Home</a>
+                                <a href="#search" data-role="button" data-icon="search">Search</a>
+                                <a href="#ask" data-role="button" data-icon="info">Ask</a>
+                                <a href=" http://www.sjrstate.edu/libraries/" rel="external" data-role="button" data-icon="plus">Full site</a>
+                                </div>
+                </div><!-- /footer -->
+
+        </div><!-- /hours page -->
+        
+        <!-- Start of ask page --> 
+        <div data-role="page" id="ask" data-theme="b"> 
+
+                <div data-role="header"> 
+                        <h1>Mobile @ Your Library</h1> 
+                </div><!-- /header --> 
+
+                <!--Content-->
+                <div data-role="content">
+                    
+                        <h2>Ask a Librarian</h2>
+                        <!--Text-->
+                        <p><strong>Text Us!</strong></p>
+                        <ul data-role="listview" data-inset="true">
+                            <li>1-XXX-XXX-XXXX.</li>
+                        </ul>
+                        <!--/Text-->
+                        
+                        <!--Email-->
+                        <p><strong>Email Us!</strong></p>
+                        <p>Palatka Campus: </p>
+                        <ul data-role="listview" data-inset="true">
+                            <li>xxx@sjrstate.edu</li>
+                        </ul>	
+                        <p>Orange Park Campus: </p>
+                        <ul data-role="listview" data-inset="true">
+                            <li>xxx@sjrstate.edu</li>
+                        </ul>
+                        <p>St. Augustine Campus: </p>
+                        <ul data-role="listview" data-inset="true">
+                            <li>xxx@sjrstate.edu</li>
+                        </ul>
+                        <!--/Email-->
+                        
+                        <!--Phone-->
+                        <p><strong>Call Us!</strong></p>
+                        <p>Palatka Campus Reference Desk: </p>
+                        <ul data-role="listview" data-inset="true">
+                            <li>(386) 312-4154</li>
+                        </ul>
+                        <p>Orange Park Campus Reference Desk: </p>
+                        <ul data-role="listview" data-inset="true">
+
+                            <li>(904) 276-6751</li>
+
+                        </ul>
+                        <p>St. Augustine Campus Reference Desk: </p>
+                        <ul data-role="listview" data-inset="true">
+                            <li>(904) 808-7671</li>
+                        </ul>
+                        <!--/Phone-->
+                        <p><a href="#home" data-rel="back">Back to home</a></p>			
+                </div><!-- /content -->
+
+                <!--Footer-->
+                <div data-role="footer" data-id="myfooter" data-position="fixed"> 
+                                <div data-role="controlgroup" data-type="horizontal">
+                                <a href="#home" data-role="button" data-icon="home">Home</a>
+                                <a href="#search" data-role="button" data-icon="search">Search</a>
+                                <a href="#ask" data-role="button" data-icon="info">Ask</a>
+                                <a href=" http://www.sjrstate.edu/libraries/" rel="external" data-role="button" data-icon="plus">Full site</a>
+                                </div>
+                </div><!-- /footer -->
+
+        </div><!-- /ask page -->    
+        
+        <!-- Start of About page --> 
+        <div data-role="page" id="about" data-theme="b"> 
+
+                <div data-role="header"> 
+                        <h1>Mobile @ Your Library</h1> 
+                </div><!-- /header --> 
+
+                <!--Content-->
+                <div data-role="content">
+                    
+                        <h2>About</h2>
+                        <!--about-->
+                        <p><strong>Welcome to St. Johns River State College! </strong></p>
+                        <p>
+                            Since 1958, SJR State has built a solid reputation as a full-service college dedicated to meeting the educational and workforce training needs of its Northeast Florida district. With campuses in Orange Park, Palatka and St. Augustine, SJR State is truly the community’s college, enriching a diverse population of students ranging in age from 16 to 60.
+
+                            SJR State continues its comprehensive educational role by expanding its services and programs while continuing its focus on the Associate in Arts (transfer) degree and more than 30 Associate in Science degrees and certificates. The College recently expanded its mission to include two baccalaureate degrees.
+                        </p>
+                        <!--/about-->
+                        
+                    <p><a href="#home" data-rel="back">Back to home</a></p>	     
+                </div><!-- /content -->
+
+                <!--Footer-->
+                <div data-role="footer" data-id="myfooter" data-position="fixed"> 
+                                <div data-role="controlgroup" data-type="horizontal">
+                                <a href="#home" data-role="button" data-icon="home">Home</a>
+                                <a href="#search" data-role="button" data-icon="search">Search</a>
+                                <a href="#ask" data-role="button" data-icon="info">Ask</a>
+                                <a href=" http://www.sjrstate.edu/libraries/" rel="external" data-role="button" data-icon="plus">Full site</a>
+                                </div>
+                </div><!-- /footer -->
+        </div><!-- /about page -->  
+        
+        <!-- Start of where page -->
+        <div data-role="page" id="where" data-dialog="false" data-theme="a">
+            <a href="#where" data-theme="a" class="ui-btn ui-shadow ui-corner-all ui-btn-right ui-icon-home ui-btn-icon-notext">Back</a>
+            <ul data-role="listview" data-inset="true">
+                <li><a href="#orange-park" data-rel="dialog" data-transition="pop">Orange Park Campus</a></li>
+                <li><a href="#palatka" data-rel="dialog" data-transition="pop">Palatka</a></li>
+                <li><a href="#st-augustine" data-rel="dialog" data-transition="pop">St. Augustine</a></li>
+            </ul>
+
+            <!-- footer -->
+            <div data-role="footer" data-id="myfooter" data-position="fixed" data-theme="a">
+
+                    <div class="controls" data-role="controlgroup" data-type="horizontal">
+                    <a href="#home" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-home">Home</a>
+                    <a href="#search" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-search">Search</a>
+                    <a href="#ask" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-info">Ask</a>
+                    <a href=" http://www.sjrstate.edu/libraries/" data-ajax="false" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-action">Full site</a>
+
+                    </div>
+            </div><!-- /footer -->
+        </div><!--/where page-->
+        
+        <!-- orange park map page-->
+        <div data-role="page" id="orange-park" data-dialog="false" data-theme="a">
+                <!-- header -->
+                <div data-role="header" data-theme="a">
+                        <h1>Map</h1>
+                        <a href="#home" data-theme="a" class="ui-btn ui-shadow ui-corner-all ui-btn-right ui-icon-home ui-btn-icon-notext">home</a>
+                </div><!-- /header -->
+
+                <!-- content -->
+                <div role="main" class="ui-content">
+                        <h2>Orange Park Campus Library</h2>
+                        <p><img alt="map to library" src="http://maps.google.com/maps/api/staticmap?center= Orange Park, FL & zoom=17&size=300x250&markers=color:blue|30.11713038957333, -81.77447914393309&mobile=true&sensor=false"/></p>
+                </div><!-- /content -->
+
+                <!-- footer -->
+                <div data-role="footer" data-id="myfooter" data-position="fixed" data-theme="a">
+
+                        <div class="controls" data-role="controlgroup" data-type="horizontal">
+                        <a href="#home" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-home">Home</a>
+
+                        <a href="#search" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-search">Search</a>
+
+                        <a href="#ask" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-info">Ask</a>
+
+                        <a href=" http://www.sjrstate.edu/libraries/" data-ajax="false" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-action">Full site</a>
+
+                        </div>
+                </div><!-- /footer -->
+        </div>	<!-- /orange park map page-->
+        
+        <!-- palatka map page-->
+        <div data-role="page" id="palatka" data-dialog="false" data-theme="a">
+                <!-- header -->
+                <div data-role="header" data-theme="a">
+                        <h1>Map</h1>
+                        <a href="#home" data-theme="a" class="ui-btn ui-shadow ui-corner-all ui-btn-right ui-icon-home ui-btn-icon-notext">home</a>
+                </div><!-- /header -->
+
+                <!-- content -->
+                <div role="main" class="ui-content">
+                        <h2>Palatka Campus Library</h2>
+                        <p><img alt="map to library" src="http://maps.google.com/maps/api/staticmap?center= Palatka, FL & zoom=17&size=300x250&markers=color:blue|29.64485463951733, -81.68159557301635&mobile=true&sensor=false"/></p>
+                </div><!-- /content -->
+
+                <!-- footer -->
+                <div data-role="footer" data-id="myfooter" data-position="fixed" data-theme="a">
+
+                        <div class="controls" data-role="controlgroup" data-type="horizontal">
+                        <a href="#home" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-home">Home</a>
+
+                        <a href="#search" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-search">Search</a>
+
+                        <a href="#ask" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-info">Ask</a>
+
+                        <a href=" http://www.sjrstate.edu/libraries/" data-ajax="false" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-action">Full site</a>
+
+                        </div>
+                </div><!-- /footer -->
+        </div>	<!-- /palatka map page-->
+        
+        <!-- st. augustine map page-->
+        <div data-role="page" id="st-augustine" data-dialog="false" data-theme="a">
+                <!-- header -->
+                <div data-role="header" data-theme="a">
+                        <h1>Map</h1>
+                        <a href="#home" data-theme="a" class="ui-btn ui-shadow ui-corner-all ui-btn-right ui-icon-home ui-btn-icon-notext">home</a>
+                </div><!-- /header -->
+
+                <!-- content -->
+                <div role="main" class="ui-content">
+                        <h2>St. Augustine Campus Library</h2>
+                        <p><img alt="map to library" src="http://maps.google.com/maps/api/staticmap?center= Saint Augustine, FL & zoom=17&size=300x250&markers=color:blue|29.91245320766498, -81.35900101534429&mobile=true&sensor=false"/></p>
+                </div><!-- /content -->
+
+                <!-- footer -->
+                <div data-role="footer" data-id="myfooter" data-position="fixed" data-theme="a">
+
+                        <div class="controls" data-role="controlgroup" data-type="horizontal">
+                        <a href="#home" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-home">Home</a>
+
+                        <a href="#search" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-search">Search</a>
+
+                        <a href="#ask" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-info">Ask</a>
+
+                        <a href=" http://www.sjrstate.edu/libraries/" data-ajax="false" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-action">Full site</a>
+
+                        </div>
+                </div><!-- /footer -->
+        </div>	<!-- /st. augustine map page-->
+        
+    </body>
+</html>
